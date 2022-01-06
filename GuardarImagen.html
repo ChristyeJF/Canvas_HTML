@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <canvas id="c" width="300" height="300"></canvas>
+    <script>
+      var c=document.querySelector("#c");
+      var ctx=c.getContext("2d");
+      var image= new Image();
+      image.onload= function(){
+        console.log("Loaded image");
+        ctx.drawImage(image, 0, 0, c.width, c.heigth);
+        var saveImage=c.toDataURL();
+        windows.open(saveImage);
+      }
+      image.src="E:\Canvas_HTML\a8e39b287c7cd7af410dc230c36c226f.jpg";
+    </script>
+  </body>
+</html>

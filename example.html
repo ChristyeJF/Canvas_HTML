@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cargar imagen en un Canvas de HTML5</title>
+<script type=»text/javascript»>
+window.onload = function() {
+var PintaCanvas = document.getElementById(‘Canvas-HTML5’);
+
+// compruebo que pueda soportar el canvas
+if(PintaCanvas && PintaCanvas.getContext) {
+// inicializo para «dibujar» en 2D
+var contexto = PintaCanvas.getContext(‘2d’);
+
+//cargo la imagen y lo asigno al canvas
+var ImagenHTML5 = new Image();
+ImagenHTML5.onload = function() {
+contexto.drawImage(ImagenHTML5, 30, 15);
+}
+ImagenHTML5.src = "Canvas_HTML/unnamed.png";
+}
+}
+</script>
+</head>
+<body>
+<canvas id=»Canvas-HTML5″ width=»200″ height=»200″>
+<p>tu navegador no soporta canvas.</p>
+</canvas>
+</body>
+</html>

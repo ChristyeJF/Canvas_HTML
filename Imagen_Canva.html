@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <canvas id="c" width="300" height="300"></canvas>
+    <script>
+      var c=document.querySelector("#c");
+      var ctx=c.getContext("2d");
+      var image= new Image();
+      image.onload= function(){
+        console.log("Loaded image");
+        ctx.drawImage(image, 0, 0);
+      }
+      image.src="Canvas_HTML/unnamed.png";
+    </script>
+  </body>
+</html>
